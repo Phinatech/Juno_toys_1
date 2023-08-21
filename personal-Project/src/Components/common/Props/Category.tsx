@@ -1,17 +1,17 @@
-import React from 'react';
-import {catergoryProps} from "../../../Types"
+import React from "react";
+import { catergoryProps } from "../../../Types";
 
-const Category:React.FC<catergoryProps> = ({subtitle, subtitle2}) => {
+const Category: React.FC<catergoryProps> = ({ subtitle, subtitle2 }) => {
   return (
-    <div className="w-full h-[fit-content] flex justify-center">
-      <div className=" w-[90%] justify-center flex flex-col items-center gap-3 shadow-sm">
+    <div className="w-[100%] h-[fit-content] flex justify-center ">
+      <div className=" w-[80%] justify-center flex flex-col items-center gap-3 ">
         <div className="font-bold text-[#181D4E] ">{subtitle}</div>
-        <div className="text-[#181D4E] font-  text-[25px] md:text-[40px] text-center font-bold leading-10 w-[85%] ">
+        <div className="text-[#181D4E] font-  text-[40px] max-md:text-[25px] max text-center font-bold leading-tight w-[100%]  ">
           {subtitle2}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Category
+export default Category;

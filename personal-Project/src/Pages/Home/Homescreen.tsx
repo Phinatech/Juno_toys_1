@@ -1,14 +1,17 @@
-
-import Hero from "./Hero"
-import { Cards } from "../../Components"
-
+import Categories from "./Categories";
+import Hero from "./Hero";
+import Testimonies from "./Testimonies";
 const Homescreen = () => {
   return (
     <div>
-        <Hero/>
-        <Cards/>
+      <Hero />
+      <br />
+      <Categories />
+      <br />
+      <br />
+      <Testimonies />
     </div>
-  )
-}
+  );
+};
 
-export default Homescreen
+export default Homescreen;

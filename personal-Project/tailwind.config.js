@@ -9,6 +9,9 @@ export default {
       backgroundImage: {
         hero: "url('/src/assets/hero1.jpg')",
       },
+      fontFamily:{
+        font: ['Poppins', 'sans-serif'],
+      }
     },
   },
   plugins: [],

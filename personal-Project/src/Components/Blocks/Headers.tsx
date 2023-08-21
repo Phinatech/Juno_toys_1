@@ -1,16 +1,12 @@
-import React from 'react';
-import pic from "../../assets/logo.png"
-import {LiaShoppingCartSolid} from "react-icons/lia"
-import {BsSearch} from "react-icons/bs"
-import {CgMenuGridO} from "react-icons/cg"
+import React from "react";
+import pic from "../../assets/logo.png";
+import { LiaShoppingCartSolid } from "react-icons/lia";
+import { BsSearch } from "react-icons/bs";
+import { CgMenuGridO } from "react-icons/cg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import {FaArrowRight} from "react-icons/fa"
-
-
-
+import { FaArrowRight } from "react-icons/fa";
 
 const Headers = () => {
-
   const [show, setShow] = React.useState(false);
 
   const toggle = () => {
@@ -18,7 +14,7 @@ const Headers = () => {
   };
   return (
     <div className="w-full h-[90px]  flex justify-center shadow relative">
-      <div className="w-[95%] flex justify-between items-center">
+      <div className="w-[90%] flex justify-between items-center">
         <div className="">
           <img src={pic} alt="" className="h-[70px] md:h-[100%]" />
         </div>
@@ -42,58 +38,59 @@ const Headers = () => {
           <div className="mr-[10px] hidden md:flex">
             <CgMenuGridO />
           </div>
-          <div className="mr-[10px] flex md:hidden"  onClick={toggle}>
+          <div className="mr-[10px] flex md:hidden" onClick={toggle}>
             <AiOutlineMenu />
           </div>
         </div>
       </div>
       {/* second header */}
-      
-      {show?(
-          <div className="absolute  left-0 bg-[#181D4E] w-[100%] flex  flex-col gap-3 top-0 ">
-        <div className="w-full h-[90px] flex justify-center shadow-sm shadow-slate-50">
-          <div className="flex text-white w-[95%]  justify-between items-center">
-            <div>
-              <img src={pic} alt="" />
-            </div>
-            <div>
-              <div onClick={toggle}><AiOutlineClose/></div>
-            </div>
-          </div>
-        </div>
-        <div className="flex w-[full] justify-center ">
-          <div className="w-[95%]">
-            <div className=" flex items-center gap-3 text-white  ">
-              <div>Home</div>
+
+      {show ? (
+        <div className="fixed  left-0 bg-[#081375] w-[100%] z-50 h-[100vh]  flex  flex-col gap-5 top-0 ">
+          <div className="w-full h-[90px] flex justify-center shadow-sm shadow-slate-50">
+            <div className="flex text-white w-[95%]  justify-between items-center">
               <div>
-                <FaArrowRight />
+                <img src={pic} alt="" />
               </div>
-            </div>
-            <div className=" flex items-center gap-3 text-white">
-              <div>Shop</div>
               <div>
-                <FaArrowRight />
-              </div>
-            </div>
-            <div className=" flex items-center gap-3 text-white">
-              <div>Blog</div>
-              <div>
-                <FaArrowRight />
-              </div>
-            </div>
-            <div className=" flex items-center gap-3 text-white">
-              <div>Contact</div>
-              <div>
-                <FaArrowRight />
+                <div onClick={toggle}>
+                  <AiOutlineClose />
+                </div>
               </div>
             </div>
           </div>
+          <div className="flex w-[full] justify-center ">
+            <div className="w-[95%] ">
+              <div className=" flex items-center gap-3 text-white mb-[20px]">
+                <div>Home</div>
+                <div>
+                  <FaArrowRight />
+                </div>
+              </div>
+              <div className=" flex items-center gap-3 text-white mb-[20px]">
+                <div>Shop</div>
+                <div>
+                  <FaArrowRight />
+                </div>
+              </div>
+              <div className=" flex items-center gap-3 text-white mb-[20px]">
+                <div>Blog</div>
+                <div>
+                  <FaArrowRight />
+                </div>
+              </div>
+              <div className=" flex items-center gap-3 text-white mb-[20px]">
+                <div>Contact</div>
+                <div>
+                  <FaArrowRight />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      ): null}
-      
+      ) : null}
     </div>
   );
-}
+};
 
-export default Headers
+export default Headers;
